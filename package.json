@@ -1,0 +1,19 @@
+{
+  "name": "rt-admin-api",
+  "version": "1.0.0",
+  "description": "API for the RT Admin app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magluf/rt-admin-api.git"
+  },
+  "author": "Sérgio Magluf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magluf/rt-admin-api/issues"
+  },
+  "homepage": "https://github.com/magluf/rt-admin-api#readme"
+}
