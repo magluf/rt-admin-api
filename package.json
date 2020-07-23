@@ -1,10 +1,13 @@
 {
   "name": "rt-admin-api",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "API for the RT Admin app.",
-  "main": "index.js",
+  "main": "build/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpileOnly ./app/app.ts",
+    "prod": "tsc && node ./build/app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/magluf/rt-admin-api/issues"
   },
-  "homepage": "https://github.com/magluf/rt-admin-api#readme"
+  "homepage": "https://github.com/magluf/rt-admin-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.7",
+    "ts-node-dev": "^1.0.0-pre.52",
+    "typescript": "^3.9.7"
+  }
 }
