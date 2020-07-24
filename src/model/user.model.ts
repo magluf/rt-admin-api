@@ -1,6 +1,6 @@
 export class User {
-  _id: number;
-  _name: string;
+  private _id: number;
+  private _name: string;
 
   constructor(id: number, name: string) {
     this._id = id;

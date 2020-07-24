@@ -1,14 +1,20 @@
-import express = require('express');
-import path = require('path');
+import express, { Application, Request, Response, NextFunction } from 'express';
+import bodyParser from 'body-parser';
 import { User } from './model/user.model';
 
-const PORT = process.env.PORT || 5000;
-const app: express.Application = express();
 const user = new User(1, 'Milena');
 
-app
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.send(`Hello ${user.name}`))
-  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+const app: Application = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get('/', (req: Request, res: Response) => {
+  res.send(`Hello, ${user.name}`);
+});
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`server is running on PORT ${PORT}`);
+});
