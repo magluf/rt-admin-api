@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/magluf/rt-admin-api#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mongoose": "^5.9.25",
     "tsc": "^1.20150623.0",
     "typescript": "^3.9.7",
